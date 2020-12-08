@@ -1,0 +1,51 @@
+{
+  "name": "qutori",
+  "version": "1.0.0",
+  "description": "qutori restaurant app",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
+    "devserver": "webpack-dev-server --open --mode development --config webpack.config.js",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass src/sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+    "build:js": "webpack",
+    "build": "npm-run-all compile:sass prefix:css compress:css build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyber-Mat/qutori.git"
+  },
+  "author": "cyber-mat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyber-Mat/qutori/issues"
+  },
+  "homepage": "https://github.com/Cyber-Mat/qutori#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "flatpickr": "^4.6.6",
+    "regenerator-runtime": "^0.13.7"
+  }
+}

@@ -1,0 +1,145 @@
+.header {
+  display: grid;
+  grid-template-columns: 42% 54% 4%;
+  height: 95vh;
+  width: 100vw;
+
+  &__text {
+    height: 100%;
+    grid-column: 1/2;
+    align-self: center;
+    padding-top: 16rem;
+
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-column-gap: 1rem;
+    align-items: center;
+
+    .line {
+      grid-column: 1/2;
+      width: 8rem;
+      height: 0.1rem;
+      background-color: $color-grey;
+    }
+
+    .content {
+      grid-column: 2/-1;
+      grid-row: 2/3;
+    }
+
+    p {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      font-size: 2rem;
+      font-weight: 400;
+      color: $color-grey;
+    }
+
+    h1 {
+      color: $color-primary;
+      font-family: 'Roboto', sans-serif;
+      font-size: 5rem;
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+
+      margin: 0.7rem 0;
+    }
+  }
+
+  &__contact {
+    grid-column: 1/-1;
+    grid-row: 3/-1;
+    align-self: end;
+
+    display: flex;
+    align-items: center;
+
+    .icon-contact {
+      margin-left: 1.5rem;
+      fill: $color-primary;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        fill: $color-secondary;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(#fff, 0.1), rgba(#fff, 0.1)),
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 2px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-hbg {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &-pins {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .icon-pin {
+        fill: $color-grey-light;
+        margin-bottom: -0.2rem;
+        transition: all 0.5s;
+
+        &-2 {
+          fill: $color-secondary-light;
+          height: 3rem;
+          width: 3rem;
+          margin: -0.6rem;
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transform: translateX(-23%);
+
+      &--all {
+        height: 6rem;
+        width: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--right {
+        background-color: $color-primary;
+      }
+
+      &--left {
+        background-color: #fff;
+      }
+
+      .icon-slider-btn {
+        height: 2.5rem;
+        width: 2.5rem;
+
+        &-right {
+          fill: $color-secondary-light;
+        }
+      }
+    }
+  }
+}

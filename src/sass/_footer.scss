@@ -1,0 +1,121 @@
+.footer {
+  padding: 0 10rem;
+  padding-bottom: 6rem;
+
+  background-image: linear-gradient(
+    rgba($color-primary2, 0.2),
+    rgba($color-primary2, 0.2)
+  );
+  background-size: cover;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  &__header {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    span {
+      color: $color-secondary;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 6rem;
+  }
+
+  &__about {
+    p {
+      padding-top: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+
+  &__newsletter {
+    &-form {
+      display: flex;
+      align-items: center;
+      padding-top: 1rem;
+
+      .newsletter-email {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        color: #fff;
+        background-color: transparent;
+        outline: solid 0.5px rgba(#fff, 0.6);
+        padding: 0.5rem;
+
+        height: 3rem;
+        width: 80%;
+
+        &::placeholder {
+          color: #fff;
+        }
+
+        &:focus {
+          &:invalid {
+            outline: 0.5px solid red;
+          }
+
+          &:valid {
+            outline: 0.5px solid greenyellow;
+          }
+        }
+      }
+
+      .newsletter-btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.7rem 1rem;
+        background: linear-gradient(
+          to top right,
+          rgba($color-secondary-light, 0.9),
+          rgba($color-secondary, 0.9)
+        );
+
+        cursor: pointer;
+        transition: all 0.2s;
+        .icon-arrow {
+          align-self: flex-end;
+          fill: #fff;
+        }
+
+        &:hover {
+          background: linear-gradient(
+            to top right,
+            rgba($color-secondary-light, 1),
+            rgba($color-secondary, 1)
+          );
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  &__contact {
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1rem;
+    }
+
+    p {
+      padding-top: 0.5rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: #fff;
+    }
+  }
+}

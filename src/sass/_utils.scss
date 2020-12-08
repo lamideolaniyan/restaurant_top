@@ -1,0 +1,154 @@
+.icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1.5rem 0.5rem 1.5rem 2rem;
+  width: 17rem;
+
+  text-transform: capitalize;
+  font-weight: 400;
+  color: #fff;
+  background: linear-gradient(
+    to top right,
+    rgba($color-secondary-light, 0.9),
+    rgba($color-secondary, 0.9)
+  );
+  // border-radius: 1000px;
+  box-shadow: $shadow-light;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  .icon-arrow {
+    align-self: flex-end;
+    fill: #fff;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      to top right,
+      rgba($color-secondary-light, 1),
+      rgba($color-secondary, 1)
+    );
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.h-small {
+  text-transform: capitalize;
+  color: $color-secondary-light;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.h-medium {
+  text-transform: capitalize;
+  color: $color-secondary-light;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.h-large {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: $color-primary;
+}
+
+.line {
+  width: 8rem;
+  height: 0.1rem;
+  background-color: $color-grey;
+  margin-right: 2rem;
+}
+
+.left-header {
+  &--top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  &--bottom {
+    margin-left: 10rem;
+  }
+}
+
+.center-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > .h-small {
+    position: relative;
+    margin-bottom: 1rem;
+
+    &::after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(30%);
+      height: 2px;
+      width: 5rem;
+
+      background-color: $color-grey-light;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &--left,
+  &--right {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &--left {
+    background-color: #eee;
+
+    & > .icon-arrow {
+      fill: $color-primary;
+    }
+  }
+
+  &--right {
+    background-color: $color-primary;
+
+    & > .icon-arrow {
+      fill: $color-secondary;
+    }
+  }
+}
+
+.white {
+  color: #fff;
+  text-transform: none;
+}
+
+.icon-arrow-down {
+  fill: #fff;
+}
+
+.invalid {
+  outline: 0.5px solid red;
+}
+.valid {
+  outline: 0.5px solid greenyellow;
+}
