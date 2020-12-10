@@ -8,3 +8,10 @@ $color-grey: rgba(61, 61, 60, 0.705);
 $color-grey-light: rgb(204, 204, 204);
 
 $shadow-light: 0 0.2rem 0.6rem rgba(#000, 0.5);
+
+// MEDIA QUERY BREAKPOINTS
+$bp-large: 56.25em; // 900px
+$bp-medium: 43.75em; // 700px
+$bp-small: 37.5em; // 600px
+$bp-vsmall: 31.25em; // 500px
+$bp-usmall: 25em; // 400px
