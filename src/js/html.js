@@ -1,8 +1,8 @@
 export const headerHTML = `<header class="header">
       <div class="header__text">
-        <div class="line">&nbsp;</div>
+      <!--<div class="line">&nbsp;</div>-->
+      <div class="content">
         <p>Discover your taste</p>
-        <div class="content">
           <h1>Eat healthy and Natural Food</h1>
           <a class="btn header__btn">
             <span>Discover menu </span>
@@ -175,7 +175,7 @@ export const bookingHTML = `<section class="footer-booking">
   </section>
   <footer class="footer" id="contact">
     <div class="footer__blur">&nbsp</div>
-    <h2 class="footer__header"><span>the</span> restro</h2>
+    <h2 class="footer__header"><span>the</span> qutori</h2>
     <div class="footer__content">
       <div class="footer__about">
         <h3 class="h-small">about us</h3>

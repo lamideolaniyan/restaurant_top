@@ -4,6 +4,10 @@
   height: 95vh;
   width: 100vw;
 
+  @media only screen and (max-width: $bp-medium) {
+    display: block;
+  }
+
   &__text {
     height: 100%;
     grid-column: 1/2;
@@ -12,9 +16,13 @@
 
     display: grid;
     grid-template-columns: 8rem 1fr;
-    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-template-rows: min-content 1fr min-content;
     grid-column-gap: 1rem;
     align-items: center;
+
+    // @media only screen and (max-width: $bp-medium) {
+    //   grid-template-rows: min-content 1fr min-content;
+    // }
 
     .line {
       grid-column: 1/2;
@@ -26,6 +34,10 @@
     .content {
       grid-column: 2/-1;
       grid-row: 2/3;
+
+      // @media only screen and (max-width: $bp-medium) {
+      //   align-self: start;
+      // }
     }
 
     p {
@@ -38,13 +50,15 @@
 
     h1 {
       color: $color-primary;
-      font-family: 'Roboto', sans-serif;
+      font-family: "Roboto", sans-serif;
       font-size: 5rem;
       line-height: 1.2;
       font-weight: 500;
       letter-spacing: 0.1rem;
 
-      margin: 0.7rem 0;
+      // margin: 0.7rem 0;
+      margin: 6rem 0;
+      margin-top: 2rem;
     }
   }
 
@@ -77,6 +91,10 @@
     background-repeat: no-repeat;
     background-position: right;
     border-radius: 2px;
+
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
   }
 
   &__slider {
