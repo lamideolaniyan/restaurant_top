@@ -103,6 +103,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
+
     &-hbg {
       visibility: hidden;
       opacity: 0;

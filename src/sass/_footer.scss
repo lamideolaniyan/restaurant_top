@@ -2,6 +2,10 @@
   padding: 0 10rem;
   padding-bottom: 6rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding: 4rem;
+    padding-bottom: 6rem;
+  }
   background-image: linear-gradient(
     rgba($color-primary2, 0.2),
     rgba($color-primary2, 0.2)
@@ -47,7 +51,7 @@
       padding-top: 1rem;
 
       .newsletter-email {
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
         font-weight: 300;
         color: #fff;
         background-color: transparent;
