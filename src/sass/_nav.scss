@@ -13,6 +13,12 @@
   -webkit-backdrop-filter: blur(2px);
   box-shadow: 0 0.5rem 2rem rgba(#000, 0.1);
 
+  @media only screen and (max-width: $bp-vsmall) {
+    padding: 1rem 4rem;
+    padding-top: 2rem;
+    width: 100%;
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;

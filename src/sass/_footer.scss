@@ -2,10 +2,17 @@
   padding: 0 10rem;
   padding-bottom: 6rem;
 
-  @media only screen and (max-width: $bp-medium) {
-    padding: 4rem;
-    padding-bottom: 6rem;
+  @media only screen and (max-width: $bp-large) {
+    padding: 2rem;
+    padding-bottom: 0rem;
+    height: 80vh;
   }
+
+  @media only screen and (max-width: $bp-vsmall) {
+    padding: 2rem;
+    height: 50vh;
+  }
+
   background-image: linear-gradient(
     rgba($color-primary2, 0.2),
     rgba($color-primary2, 0.2)
@@ -18,7 +25,6 @@
     text-transform: capitalize;
     font-weight: 700;
     font-size: 3.5rem;
-    margin-bottom: 1.5rem;
     text-transform: capitalize;
     font-weight: 700;
     font-size: 3.5rem;
@@ -33,9 +39,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 6rem;
+
+    @media only screen and (max-width: $bp-vsmall) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__about {
+    @media only screen and (max-width: $bp-vsmall) {
+      display: none;
+    }
+
     p {
       padding-top: 0.5rem;
       font-size: 1.4rem;
@@ -45,6 +60,10 @@
   }
 
   &__newsletter {
+    @media only screen and (max-width: $bp-vsmall) {
+      display: none;
+    }
+
     &-form {
       display: flex;
       align-items: center;

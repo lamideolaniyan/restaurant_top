@@ -8,6 +8,18 @@
   background-size: cover;
 
   padding-top: 2rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding-top: 8rem;
+
+    .line {
+      width: 2rem;
+    }
+
+    .left-header--bottom {
+      margin-left: 4rem;
+    }
+  }
 }
 
 .booking {
@@ -19,6 +31,14 @@
     grid-template-columns: repeat(3, 12rem);
     grid-template-rows: repeat(3, min-content);
     grid-gap: 2rem;
+
+    @media only screen and (max-width: $bp-large) {
+      padding: 1rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-vsmall) {
+      padding: 1rem 4rem;
+    }
   }
 
   &__date,
@@ -43,7 +63,7 @@
 }
 
 .form-input {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   color: #fff;
   background-color: transparent;

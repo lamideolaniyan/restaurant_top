@@ -23,6 +23,12 @@
   cursor: pointer;
   transition: all 0.2s;
 
+  &.form-btn {
+    @media only screen and (max-width: $bp-large) {
+      width: 24rem;
+    }
+  }
+
   .icon-arrow {
     align-self: flex-end;
     fill: #fff;
@@ -94,7 +100,7 @@
 
     &::after {
       display: block;
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
