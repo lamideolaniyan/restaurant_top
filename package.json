@@ -11,18 +11,19 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
     "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
     "build:js": "webpack",
-    "build": "npm-run-all compile:sass prefix:css compress:css build:js"
+    "build": "npm-run-all compile:sass prefix:css compress:css build:js",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cyber-Mat/qutori.git"
+    "url": "git+https://github.com/Cyber-Mat/restaurant_top.git"
   },
   "author": "cyber-mat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cyber-Mat/qutori/issues"
+    "url": "https://github.com/Cyber-Mat/restaurant_top/issues"
   },
-  "homepage": "https://github.com/Cyber-Mat/qutori#readme",
+  "homepage": "http://cyber-mat.github.io/restaurant_top",
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.1",
@@ -32,6 +33,7 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
     "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
