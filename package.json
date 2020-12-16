@@ -1,7 +1,7 @@
 {
-  "name": "qutori",
+  "name": "restaurant_top",
   "version": "1.0.0",
-  "description": "qutori restaurant app",
+  "description": "restaurant app",
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass src/sass/main.scss dist/css/style.css -w",
